@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Follow along links</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Tweets</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      Lorem ipsum dolor, sit amet <a href="">consectetur</a> adipisicing elit. Beatae magni,
+      praesentium ea consequatur excepturi ipsam repellendus perspiciatis
+      reprehenderit odit nobis <a href="">ipsum</a> animi fugiat in error? Beatae, vitae porro.
+      Voluptatem, deleniti. Esse, aliquid ad reprehenderit molestias quo odio
+      ullam magni quis, cumque nulla voluptatum sequi sed ipsum officiis officia
+      maxime harum? Facilis id atque ea perferendis adipisci cumque quas harum
+      in. Provident veniam vero quae ad tempore ipsam rerum reprehenderit totam!
+      Corrupti et voluptate quo ex harum odit magni sit! Mollitia sed explicabo
+      quas. <a href="">Blanditiis</a> cum possimus repudiandae at, animi deleniti. Quidem a cum
+      rerum itaque obcaecati eos fugiat laborum. Dolores ut, iste voluptatem
+      possimus porro quia. Provident voluptas reprehenderit ipsum saepe
+      laboriosam vitae, fugit assumenda tempore quasi autem reiciendis rerum!
+      At, itaque rem. Ullam <a href="">deserunt</a> non obcaecati mollitia vitae ipsam amet,
+      aliquid, iure delectus quasi, sed laboriosam laudantium veniam dolore ex.
+      Repellendus architecto, aliquid aut ad ipsam exercitationem aperiam
+      voluptate? Corrupti perspiciatis voluptate voluptates. Fuga nesciunt
+      laborum amet voluptatum tenetur ducimus, ad numquam facilis impedit,
+      laudantium nemo voluptates, molestiae esse enim alias. Eos architecto
+      praesentium tenetur quas <a href="">accusantium</a> sint ullam! Accusantium sint nam id
+      qui fuga consequuntur voluptate voluptas deleniti ipsa, perspiciatis
+      accusamus quos dolorem dolor optio numquam natus ipsam eius provident quo.
+      Voluptatum doloremque eum in quasi porro eius. Nam, illum consectetur
+      labore, <a href="">praesentium</a> ratione repellat accusamus vitae, sed adipisci earum
+      quia expedita et fugiat ab nihil esse temporibus! Cum voluptates, vel eum
+      amet enim soluta perferendis odit similique? Aperiam quo cupiditate
+      tempora quae perferendis. Nostrum officiis <a href="">voluptatibus</a> id eum at maxime
+      dolor dignissimos voluptatem fugit tempore ratione harum facere in
+      pariatur dolores dolore, sit dolorem saepe, dolorum eaque. Excepturi omnis
+      consequatur officia eius odio quae nisi suscipit accusamus. Eaque
+      repellendus officia cum itaque exercitationem corporis voluptatum porro!
+      Pariatur dolorum <a href="">expedita</a> esse dicta praesentium totam, placeat nobis
+      optio laudantium.
+    </div>
+
+    <script>
+      const triggers = document.querySelectorAll('a')
+      const highlight = document.createElement('span')
+      highlight.classList.add('highlight')
+      document.body.append(highlight)
+
+      function highlightLink() {
+        highlight.style.width = `${this.offsetWidth}px`;
+        highlight.style.height = `${this.offsetHeight}px`;
+        highlight.style.top = `${this.offsetTop - 1}px`;
+        highlight.style.left = `${this.offsetLeft - 2}px`;
+      }
+
+      triggers.forEach(trigger => trigger.addEventListener('mouseenter', highlightLink))
+    </script>
+  </body>
+</html>
